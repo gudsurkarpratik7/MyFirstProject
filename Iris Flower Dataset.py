@@ -20,7 +20,7 @@ print (iris.shape)
 print('features/Variables are :')
 print (iris.columns)#variables
 
-
+print(iris["species"].value_counts())
 
 
 
