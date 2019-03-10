@@ -66,6 +66,17 @@ plt.close();
 
 
 
+counts, bin_edges = np.histogram(alive['positive_lymph_nodes'], bins=10,
+                                 density = True)
+pdf = counts/(sum(counts))
+print(pdf);
+print(bin_edges)
+cdf = np.cumsum(pdf)
+plt.plot(bin_edges[1:],pdf)
+plt.plot(bin_edges[1:], cdf)
+plt.legend(['Pdf for the patients who survive more than 5 years',
+            'Cdf for the patients who survive more than 5 years'])
+plt.show()
 
 #Pair plots
 
@@ -76,3 +87,18 @@ sns.set_style("whitegrid");               #Step1:Set the gird to white.
 sns.pairplot(iris, hue="species", size=3);#.pairplot(dataset,hue='',size=n) function to plot pairplot
 plt.show()
 
+counts, bin_edges = np.histogram(setosa['petal_length'], bins=10,
+                                 density = True)
+pdf = counts/(sum(counts))
+print(pdf);
+print(bin_edges);
+cdf = np.cumsum(pdf)
+plt.plot(bin_edges[1:],pdf);
+plt.plot(bin_edges[1:], cdf)
+
+counts, bin_edges = np.histogram(setosa['petal_length'], bins=20,
+                                 density = True)
+pdf = counts/(sum(counts))
+plt.plot(bin_edges[1:],pdf);
+
+plt.show();

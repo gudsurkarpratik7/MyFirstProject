@@ -78,12 +78,11 @@ plt.show()
 #CDF
 
 
-
 #Bivariate:Pair Plots
 sns.set_style("whitegrid");               #Step1:Set the gird to white.
-sns.pairplot(haberman, hue="status", height=2);#.pairplot(dataset,hue='',size=n) function to plot pairplot
+sns.pairplot(haberman, hue="status",vars=['age','year','nodes'] ,height=2);#.pairplot(dataset,hue='',size=n) function to plot pairplot
 plt.show()
 
 
 #observation:Year of tratement and number of  nodes are  the 2 parameteres that shows better seperation that others
-
+#Git Push Check 
